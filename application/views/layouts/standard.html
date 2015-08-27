@@ -1,45 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SwiftMVC Framework">
-    <meta name="author" content="Faizan Ayubi">
+    <head>
+        <title>BiharShadi</title>
+        <meta charset="utf-8">
+        <meta name = "format-detection" content = "telephone=no" />
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="{echo CDN}css/booking.css">
+        <link rel="stylesheet" href="{echo CDN}css/style.css">
+        
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="{echo CDN}js/script.js"></script> 
+        <script src="{echo CDN}js/superfish.js"></script>
+        <script src="{echo CDN}js/jquery.equalheights.js"></script>
+        <script src="{echo CDN}js/jquery.mobilemenu.js"></script>
+        <script src="{echo CDN}js/tmStickUp.js"></script>
+        <script src="{echo CDN}js/jquery.ui.totop.js"></script>
+        <script src="{echo CDN}js/booking.js"></script>
+    </head>
 
-    <title>SwiftMVC Framework</title>
+    <body class="page1" id="top">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        {include layouts/navigation/standard.html}
+        {ayield action}
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="grid_2">
+                        <ul class="color3">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Why Us?</a></li>
+                            <li><a href="#">Tour</a></li>
+                            <li><a href="#">Success Stories</a></li>
+                            <li><a href="#">Diversity</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid_2">
+                        <ul class="color3">
+                            <li><a href="#">Gift Subscription</a></li>
+                            <li><a href="#">Promotions</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                            <li><a href="#">Advertising</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid_2">
+                        <ul class="color3">
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Safety Tips</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Compatible Browsers</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid_2">
+                        <ul class="color3">
+                            <li><a href="#">Asian Dating</a></li>
+                            <li><a href="#">Black Dating</a></li>
+                            <li><a href="#">Christian Dating</a></li>
+                            <li><a href="#">Senior Dating</a></li>
+                            <li><a href="#">Jewish Dating</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid_2">
+                        <ul class="color3">
+                            <li><a href="#">Gay and Lesbian Dating</a></li>
+                            <li><a href="#">Hispanic Dating</a></li>
+                            <li><a href="#">Local Dating</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid_2">
+                        <div class="socials">
+                            <a href="#" class="fa fa-facebook-square"></a>
+                            <a href="#" class="fa fa-twitter-square"></a>
+                        </div>
+                    </div>
+                    <div class="grid_12"> 
+                        <div class="copyright">Love  &copy; <span id="copyright-year"></span>.  <a href="index-5.html">Privacy Policy</a> <!--{%FOOTER_LINK} -->
+                        </div>
+                    </div>
+                </div>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    {include layouts/navigation/standard.html}
-    {ayield action}
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-</body>
-
+            </div>  
+        </footer>
+        <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+    </body>
 </html>
