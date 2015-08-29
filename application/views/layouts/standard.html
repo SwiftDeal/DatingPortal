@@ -1,89 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>BiharShadi</title>
         <meta charset="utf-8">
-        <meta name = "format-detection" content = "telephone=no" />
-        <link rel="icon" href="images/favicon.ico">
-        <link rel="shortcut icon" href="images/favicon.ico" />
-        <link rel="stylesheet" href="{echo CDN}css/booking.css">
-        <link rel="stylesheet" href="{echo CDN}css/style.css">
-        
-        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="{echo CDN}js/script.js"></script> 
-        <script src="{echo CDN}js/superfish.js"></script>
-        <script src="{echo CDN}js/jquery.equalheights.js"></script>
-        <script src="{echo CDN}js/jquery.mobilemenu.js"></script>
-        <script src="{echo CDN}js/tmStickUp.js"></script>
-        <script src="{echo CDN}js/jquery.ui.totop.js"></script>
-        <script src="{echo CDN}js/booking.js"></script>
+        <title>BiharShadi</title>
+        <!--Meta-->
+        <meta name="description"  content="Matrimonial Site for Bihar">
+        <meta name="author"  content="Bihar Shadi">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/styles/foundation.min.css">
+        <!--Plugins-->
+        <link rel="stylesheet" href="assets/styles/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/styles/prettyPhoto.css">
+
+
+        <!--Main Stylesheet (change this to modify template)-->
+        <link rel="stylesheet" href="assets/styles/app.css">
+        <link rel="stylesheet" href="assets/styles/updates.css">
+        <link rel="stylesheet" href="assets/styles/custom.css">
+
+
+        <!--Google Fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+
+        <!--Favicons-->
+        <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+
+        <!-- jQuery & Foundation Framework -->
+        <script type="text/javascript" src="assets/scripts/modernizr.foundation.js"></script> 
     </head>
+    <body>
+        <div class="page wide-style">
 
-    <body class="page1" id="top">
+            {include layouts/navigation/standard.html}
+            {ayield action}
 
-        {include layouts/navigation/standard.html}
-        {ayield action}
+            <p id="btnGoUp">Go up</p>
+        </div>
+        
+        
+        <script type="text/javascript" src="assets/scripts/jquery.js"></script>
+        <script type="text/javascript" src="assets/scripts/foundation.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/jquery.carouFredSel-6.2.0-packed.js"></script>
+        
+        <!-- optionally include helper for carouFredSel plugins -->
+        <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.transit.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/retina/retina.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/knob/jquery.knob.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/twitterfeed-ap-1.1/twitterfeed-ap.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/fittext/jquery.fittext.js"></script>
+        <script type="text/javascript" src="assets/scripts/plugins/quovolver/jquery.quovolver.js"></script><!--Quote rotator-->
+        <script type="text/javascript" src="assets/scripts/plugins/backgroundSize/jquery.backgroundSize.js"></script><!--BackgroundSize for IE8-->
+        <script type="text/javascript" src="assets/scripts/plugins/prettyPhoto/jquery.prettyPhoto.js"></script>
 
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="grid_2">
-                        <ul class="color3">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Why Us?</a></li>
-                            <li><a href="#">Tour</a></li>
-                            <li><a href="#">Success Stories</a></li>
-                            <li><a href="#">Diversity</a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_2">
-                        <ul class="color3">
-                            <li><a href="#">Gift Subscription</a></li>
-                            <li><a href="#">Promotions</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Advertising</a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_2">
-                        <ul class="color3">
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Safety Tips</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Compatible Browsers</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_2">
-                        <ul class="color3">
-                            <li><a href="#">Asian Dating</a></li>
-                            <li><a href="#">Black Dating</a></li>
-                            <li><a href="#">Christian Dating</a></li>
-                            <li><a href="#">Senior Dating</a></li>
-                            <li><a href="#">Jewish Dating</a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_2">
-                        <ul class="color3">
-                            <li><a href="#">Gay and Lesbian Dating</a></li>
-                            <li><a href="#">Hispanic Dating</a></li>
-                            <li><a href="#">Local Dating</a></li>
-                        </ul>
-                    </div>
-                    <div class="grid_2">
-                        <div class="socials">
-                            <a href="#" class="fa fa-facebook-square"></a>
-                            <a href="#" class="fa fa-twitter-square"></a>
-                        </div>
-                    </div>
-                    <div class="grid_12"> 
-                        <div class="copyright">Love  &copy; <span id="copyright-year"></span>.  <a href="index-5.html">Privacy Policy</a> <!--{%FOOTER_LINK} -->
-                        </div>
-                    </div>
-                </div>
 
-            </div>  
-        </footer>
-        <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+        <!-- Custom JS effects, tweaks and inits -->
+        <script type="text/javascript" src="assets/scripts/app.js"></script>
+
     </body>
 </html>
