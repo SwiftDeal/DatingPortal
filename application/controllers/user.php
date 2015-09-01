@@ -7,10 +7,13 @@
  */
 use Framework\Controller as Controller;
 
-class Home extends Controller {
+class User extends Controller {
 
     public function index() {
-    	
+        
+    }
+    public function profile() {
+        
     }
 
 }

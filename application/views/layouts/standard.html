@@ -20,8 +20,8 @@
 
 
         <!--Google Fonts-->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet" type="text/css">
 
         <!--Favicons-->
         <link rel="shortcut icon" href="{echo CDN}images/icons/favicon.ico">
@@ -35,9 +35,174 @@
             {include layouts/navigation/standard.html}
             {ayield action}
 
+
+
+
+<!-- FOOTER SECTION
+================================================ -->
+<footer>
+  <div id="footer">
+    <div class="row">
+    
+        <!--About us-->
+      <div class="three columns section">
+        <h5><i class="icon-heart"></i> About us</h5>
+        <p>Lorem ipsum dolor sit amet, has an nullam sadipscing ullamcorper, nisl graeci minimum usu no, ne est erat deseruisse vituperata.</p>
+        <p><i class="icon-envelope">&nbsp;&nbsp; info@biharshadi.com</i>
+        &nbsp;<a href="tel:1234567890"></a><br>&nbsp;
+        <i class="icon-mobile-phone icon-large"></i> &nbsp;&nbsp;(123) 456-7890</p>
+        <p class="footer-social-icons">Stay in touch:<br>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Follow us on Twitter"><i class="icon-twitter-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Facebook"><i class="icon-facebook-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Google+"><i class="icon-google-plus-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Pin us on Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
+        </p>
+      </div>
+      <!--end about us-->
+      
+      <!--Useful links-->
+      <div class="three columns section">
+        <h5>Useful links</h5>
+        <ul class="no-bullet">
+          <li><i class="icon-angle-right"></i> <a href="#">Terms and Conditions</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Forgotten Username</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Forgotten Password</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">FAQ</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Safety</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Affiliate</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <!--end useful links-->
+      
+      <!--Twitter feed-->
+      <div class="three columns section">
+        <h5><i class="icon-twitter"></i> Latest twitt"s 1.1 API</h5>
+        <!-- IMPORTANT see docs on how to create your feed -->
+        <div id="twitter-feed"></div>
+      </div>
+      <!--end twitter feed-->
+      
+      <!--Latest from blog-->
+      <div class="three columns section">
+        <h5>Latest from blog</h5>
+        <ul class="latest-blog">
+            <li>
+            <span class="avatar"><a href="#"><img src="{echo CDN}images/quote/user_quote_02.jpg" alt=""></a></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. <a href="#">read more</a></p>
+          </li>
+          <li>
+            <span class="avatar"><a href="#"><img src="{echo CDN}images/quote/user_quote_01.jpg" alt=""></a></span>
+            <p>Ut enim ad minim veniam, quis nostrud. <a href="#">read more</a></p>
+          </li>
+          <li>
+            <span class="avatar"><a href="#"><img src="{echo CDN}images/quote/user_quote_03.jpg" alt=""></a></span>
+            <p>Duis aute irure dolor in reprehenderit in voluptate. <a href="#">read more</a></p>
+          </li>
+        </ul>
+      </div>
+      <!--end latest from blog-->
+      
+      <div class="twelve columns">
+        <hr>
+        <p>Copyright &copy; 2013 YourSweetName Network. All Rights Reserved. A premium landing page from <a href="http://themeforest.net/user/SeventhQueen/portfolio?ref=SeventhQueen" target="_blank">Seven<sup>th</sup> Queen</a></p>
+      </div>
+    </div>
+  </div><!--end footer-->
+</footer>
+<!--END FOOTER SECTION-->
+
+<!-- POP-UP MODAL FORMS
+================================================ -->
+<!--Login panel-->
+<div id="login_panel" class="reveal-modal">
+  <div class="row">
+    <div class="twelve columns">
+      <h5 class="pink-text"><i class="icon-user icon-large"></i> SIGN IN YOUR ACCOUNT <span class="subheader right small-link"><a href="#" data-reveal-id="register_panel" class="radius secondary small button">CREATE NEW ACCOUNT</a></span></h5>
+    </div>
+    <form id="login_form" name="login_form" method="post" class="clearfix">
+      <div class="six columns">
+        <input type="text" id="username" name="username" class="inputbox" placeholder="Username" required>
+      </div>
+      <div class="six columns">
+        <input type="password" id="password" name="password" class="inputbox" placeholder="Password" required>
+      </div>
+      <p class="twelve columns">
+        <small><i class="icon-lock"></i> Your <a href="#">privacy</a> is important to us and we will never rent or sell your information.</small>
+      </p>
+      <div class="twelve columns">
+        <button type="submit" id="login" name="submit" class="radius secondary button"><i class="icon-unlock"></i> &nbsp;LOG IN</button> &nbsp; <a href="#" class="radius button facebook"><i class="icon-facebook-sign"></i> &nbsp;LOG IN WITH Facebook</a>
+      </div>
+    </form>
+    <div class="twelve columns"><hr>
+      <ul class="inline-list">
+        <li><small><a href="#" data-reveal-id="forgot_panel">FORGOT YOUR USERNAME?</a></small></li>
+        <li><small><a href="#" data-reveal-id="forgot_panel">FORGOT YOUR PASSWORD?</a></small></li>
+      </ul>
+    </div>
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!--end login panel-->
+
+<!-- Register panel -->
+<div id="register_panel" class="reveal-modal">
+  <div class="row">
+    <div class="twelve columns">
+      <h5 class="pink-text"><i class="icon-magic icon-large"></i> CREATE ACCOUNT <span class="subheader right small-link"><a href="#" data-reveal-id="login_panel" class="radius secondary small button">ALREADY HAVE AN ACCOUNT?</a></span></h5>   
+    </div>
+    <form id="register_form" name="register_form" method="post">
+      <div class="six columns">
+        <input type="text" id="reg-username" name="username" class="inputbox" placeholder="Username">
+      </div>
+      <div class="six columns">
+        <input type="text" id="fullname" name="fullname" class="inputbox" placeholder="Your full name">
+      </div>
+      <div class="twelve columns">
+        <input type="text" id="reg-email" name="email" class="inputbox" placeholder="Your email">
+      </div>
+      <div class="six columns">
+        <input type="password" id="reg-password" name="password" class="inputbox" placeholder="Desired password">
+      </div>
+      <div class="six columns">
+        <input type="password" id="confirm_password" name="confirm_password" class="inputbox" placeholder="Confirm password">
+      </div>
+      <div class="twelve columns">
+        <p><small>Check our <a href="#"><strong>terms and conditions</strong></a> before sign up. If you familiar with our terms, go ahead click CREATE MY ACCOUNT button.</small></p>
+        <button type="submit" id="signup" name="submit" class="radius alert button"><i class="icon-heart"></i> &nbsp;CREATE MY ACCOUNT</button>
+      </div>
+    </form>
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!-- end register panel -->
+
+<!-- Forgot panel -->
+<div id="forgot_panel" class="reveal-modal">
+  <div class="row">
+    <div class="twelve columns">
+      <h5 class="pink-text"><i class="icon-lightbulb icon-large"></i> FORGOT YOUR DETAILS?</h5>
+    </div>
+    <form id="forgot_form" name="forgot_form" method="post" class="clearfix">
+    <div class="twelve columns">
+      <input type="text" id="forgot-email" name="email" class="inputbox" placeholder="Email Address">
+      <button type="submit" id="recover" name="submit" class="radius secondary button">SEND MY DETAILS! &nbsp;<i class="icon-envelope"></i></button>
+    </div>
+    </form>
+    <div class="twelve columns"><hr>
+      <small><a href="#" data-reveal-id="login_panel" class="radius secondary label">AAH, WAIT, I REMEMBER NOW!</a></small>
+    </div>
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!-- end register panel -->
+<!-- end login register stuff -->
+
+<p id="btnGoUp">Go up</p>
+</div><!--end page-->  
+
+<!--END POP-UP MODAL FORMS-->
+
             <p id="btnGoUp">Go up</p>
-        </div>
-        
+      
         
         <script type="text/javascript" src="{echo CDN}scripts/jquery.js"></script>
         <script type="text/javascript" src="{echo CDN}scripts/foundation.min.js"></script>
@@ -58,6 +223,7 @@
 
         <!-- Custom JS effects, tweaks and inits -->
         <script type="text/javascript" src="{echo CDN}scripts/app.js"></script>
+        <script type="text/javascript" src="{echo CDN}scripts/custom.js"></script>
 
     </body>
 </html>
