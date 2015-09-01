@@ -15,5 +15,8 @@ class User extends Controller {
     public function profile() {
         
     }
+    public function myaccount() {
+        
+    }
 
 }

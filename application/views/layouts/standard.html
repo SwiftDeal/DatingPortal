@@ -30,7 +30,13 @@
         <script type="text/javascript" src="{echo CDN}scripts/modernizr.foundation.js"></script> 
     </head>
     <body>
-        <div class="page wide-style">
+        {if URL=="http://localhost/DatingPortal/" || URL=="http://localhost/DatingPortal/home" | URL=="http://localhost/DatingPortal//"}
+        {script $pic = true}
+        {/if}
+        {else}
+        {script $pic = false}
+        {/else}
+        <div class="{if($pic==false)} inner {/if} page wide-style">
 
             {include layouts/navigation/standard.html}
             {ayield action}
@@ -45,24 +51,17 @@
     <div class="row">
     
         <!--About us-->
-      <div class="three columns section">
+      <div class="four columns section">
         <h5><i class="icon-heart"></i> About us</h5>
         <p>Lorem ipsum dolor sit amet, has an nullam sadipscing ullamcorper, nisl graeci minimum usu no, ne est erat deseruisse vituperata.</p>
         <p><i class="icon-envelope">&nbsp;&nbsp; info@biharshadi.com</i>
         &nbsp;<a href="tel:1234567890"></a><br>&nbsp;
         <i class="icon-mobile-phone icon-large"></i> &nbsp;&nbsp;(123) 456-7890</p>
-        <p class="footer-social-icons">Stay in touch:<br>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Follow us on Twitter"><i class="icon-twitter-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Facebook"><i class="icon-facebook-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Google+"><i class="icon-google-plus-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Pin us on Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
-        </p>
       </div>
       <!--end about us-->
       
       <!--Useful links-->
-      <div class="three columns section">
+      <div class="four columns section">
         <h5>Useful links</h5>
         <ul class="no-bullet">
           <li><i class="icon-angle-right"></i> <a href="#">Terms and Conditions</a></li>
@@ -76,37 +75,22 @@
       </div>
       <!--end useful links-->
       
-      <!--Twitter feed-->
-      <div class="three columns section">
-        <h5><i class="icon-twitter"></i> Latest twitt"s 1.1 API</h5>
-        <!-- IMPORTANT see docs on how to create your feed -->
-        <div id="twitter-feed"></div>
-      </div>
-      <!--end twitter feed-->
-      
       <!--Latest from blog-->
-      <div class="three columns section">
-        <h5>Latest from blog</h5>
-        <ul class="latest-blog">
-            <li>
-            <span class="avatar"><a href="#"><img src="{echo CDN}images/quote/user_quote_02.jpg" alt=""></a></span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. <a href="#">read more</a></p>
-          </li>
-          <li>
-            <span class="avatar"><a href="#"><img src="{echo CDN}images/quote/user_quote_01.jpg" alt=""></a></span>
-            <p>Ut enim ad minim veniam, quis nostrud. <a href="#">read more</a></p>
-          </li>
-          <li>
-            <span class="avatar"><a href="#"><img src="{echo CDN}images/quote/user_quote_03.jpg" alt=""></a></span>
-            <p>Duis aute irure dolor in reprehenderit in voluptate. <a href="#">read more</a></p>
-          </li>
-        </ul>
+      <div class="four columns section">
+         <p class="footer-social-icons">Stay in touch:<br>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Follow us on Twitter"><i class="icon-twitter-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Facebook"><i class="icon-facebook-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Google+"><i class="icon-google-plus-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Pin us on Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
+        </p>
       </div>
       <!--end latest from blog-->
       
       <div class="twelve columns">
         <hr>
-        <p>Copyright &copy; 2013 YourSweetName Network. All Rights Reserved. A premium landing page from <a href="http://themeforest.net/user/SeventhQueen/portfolio?ref=SeventhQueen" target="_blank">Seven<sup>th</sup> Queen</a></p>
+        <p>Copyright &copy; 2015 BiharShadi.com All Rights Reserved. A premium landing page from 
+        <span class="pull-right"> Developed By <a href="https://www.cloudstuffs.com/" target="_blank"> Cloudstuffs</a></span></p>
       </div>
     </div>
   </div><!--end footer-->
@@ -123,7 +107,7 @@
     </div>
     <form id="login_form" name="login_form" method="post" class="clearfix">
       <div class="six columns">
-        <input type="text" id="username" name="username" class="inputbox" placeholder="Username" required>
+        <input type="text" id="username" name="username" class="inputbox" placeholder="Email ID" required>
       </div>
       <div class="six columns">
         <input type="password" id="password" name="password" class="inputbox" placeholder="Password" required>
@@ -137,7 +121,6 @@
     </form>
     <div class="twelve columns"><hr>
       <ul class="inline-list">
-        <li><small><a href="#" data-reveal-id="forgot_panel">FORGOT YOUR USERNAME?</a></small></li>
         <li><small><a href="#" data-reveal-id="forgot_panel">FORGOT YOUR PASSWORD?</a></small></li>
       </ul>
     </div>
@@ -153,13 +136,37 @@
     </div>
     <form id="register_form" name="register_form" method="post">
       <div class="six columns">
-        <input type="text" id="reg-username" name="username" class="inputbox" placeholder="Username">
+        <input type="text"  name="fullname" class="inputbox" placeholder="Your Full Name">
+      </div>
+      <div class="two columns">
+        <input type="text" name="age" class="inputbox" placeholder="Age">
+      </div>
+      <div class="four columns">
+        <select name="gender" class="inputbox">
+          <option>Geneder</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
       </div>
       <div class="six columns">
-        <input type="text" id="fullname" name="fullname" class="inputbox" placeholder="Your full name">
+        <select name="religion" class="inputbox">
+          <option>Religion</option>
+          <option>Hindu</option>
+          <option>Muslim</option>
+          <option>Bodh</option>
+          <option>Christian</option>
+          <option>Jain</option>
+          <option>Sikh</option>
+        </select>
       </div>
-      <div class="twelve columns">
+      <div class="six columns">
+        <input type="text" name="caste" class="inputbox" placeholder="Your Caste">
+      </div>
+      <div class="six columns">
         <input type="text" id="reg-email" name="email" class="inputbox" placeholder="Your email">
+      </div>
+      <div class="six columns">
+        <input type="text"  name="phone" class="inputbox" placeholder="Mobile No.">
       </div>
       <div class="six columns">
         <input type="password" id="reg-password" name="password" class="inputbox" placeholder="Desired password">
