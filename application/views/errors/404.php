@@ -56,7 +56,9 @@
 </head>
 <body>
 
-
+<?php if (DEBUG): ?>
+<pre><?php print_r($e); ?></pre>
+<?php endif; ?>
 
 
 

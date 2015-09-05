@@ -14,25 +14,11 @@ class Admin extends Users {
 	/**
 	* Method which sets data stats for admin dashboard
 	*
-	* @before _secure, changeLayout
+	* changeLayout
 	*/
 	public function index() {
 		$this->seo(array("title" => "Admin Panel", "keywords" => "admin", "description" => "admin", "view" => $this->getLayoutView()));
 		$view = $this->getActionView();
-		$now = strftime("%Y-%m-%d", strtotime('now'));
-		$users = User::count();
-		$organizations = Organization::count();
-		$opportunities = Opportunity::count();
-		$applications = Application::count();
-		$leads = Lead::count();
-		$resumes = Resume::count();
-		$view->set("now", $now);
-		$view->set("users", $users);
-		$view->set("organizations", $organizations);
-		$view->set("opportunities", $opportunities);
-		$view->set("applications", $applications);
-		$view->set("leads", $leads);
-		$view->set("resumes", $resumes);
 	}
 	/**
 	* Searchs for data and returns result from db
@@ -219,16 +205,5 @@ class Admin extends Users {
 	public function changeLayout() {
 		$this->defaultLayout = "layouts/admin";
 		$this->setLayout();
-		if ($this->user->type != 'admin') {
-			die('Not Admin');
-		}
-		$session = Registry::get("session");
-		$employer = $session->get("employer");
-		$member = $session->get("member");
-		$this->_employer = $employer;
-		$this->getActionView()->set("employer", $employer);
-		$this->getLayoutView()->set("employer", $employer);
-		$this->getActionView()->set("member", $member);
-		$this->getLayoutView()->set("member", $member);
 		}
 	}

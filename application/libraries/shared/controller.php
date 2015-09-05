@@ -19,6 +19,15 @@ namespace Shared {
          */
         protected $_user;
 
+        public function seo($params = array()) {
+            $seo = Registry::get("seo");
+            foreach ($params as $key => $value) {
+                $property = "set" . ucfirst($key);
+                $seo->$property($value);
+            }
+            $params["view"]->set("seo", $seo);
+        }
+
         /**
          * @protected
          */
