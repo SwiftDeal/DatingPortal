@@ -30,7 +30,7 @@
         <script type="text/javascript" src="{echo CDN}scripts/modernizr.foundation.js"></script> 
     </head>
     <body>
-        {if URL=="http://localhost/DatingPortal/" || URL=="http://localhost/DatingPortal/home" | URL=="http://localhost/DatingPortal//"}
+        {if URL=="http://biharshadi.com/" || URL=="http://biharshadi.com/home" | URL=="http://biharshadi.com//"}
         {script $pic = true}
         {/if}
         {else}
@@ -101,9 +101,9 @@
     <div class="twelve columns">
       <h5 class="pink-text"><i class="icon-user icon-large"></i> SIGN IN YOUR ACCOUNT <span class="subheader right small-link"><a href="#" data-reveal-id="register_panel" class="radius secondary small button">CREATE NEW ACCOUNT</a></span></h5>
     </div>
-    <form id="login_form" name="login_form" method="post" class="clearfix">
+    <form id="login_form" name="login_form" method="post" class="clearfix" action="/home">
       <div class="six columns">
-        <input type="text" id="username" name="username" class="inputbox" placeholder="Email ID" required>
+        <input type="text" id="username" name="email" class="inputbox" placeholder="Email ID" required>
       </div>
       <div class="six columns">
         <input type="password" id="password" name="password" class="inputbox" placeholder="Password" required>
@@ -112,7 +112,8 @@
         <small><i class="icon-lock"></i> Your <a href="#">privacy</a> is important to us and we will never rent or sell your information.</small>
       </p>
       <div class="twelve columns">
-        <button type="submit" id="login" name="submit" class="radius secondary button"><i class="icon-unlock"></i> &nbsp;LOG IN</button> &nbsp; <a href="#" class="radius button facebook"><i class="icon-facebook-sign"></i> &nbsp;LOG IN WITH Facebook</a>
+        <button type="submit" id="login" name="submit" class="radius secondary button"><i class="icon-unlock"></i> &nbsp;LOG IN</button>
+	<input type="hidden" name="login" value="true_modal">
       </div>
     </form>
     <div class="twelve columns"><hr>
@@ -130,9 +131,9 @@
     <div class="twelve columns">
       <h5 class="pink-text"><i class="icon-magic icon-large"></i> CREATE ACCOUNT <span class="subheader right small-link"><a href="#" data-reveal-id="login_panel" class="radius secondary small button">ALREADY HAVE AN ACCOUNT?</a></span></h5>   
     </div>
-    <form id="register_form" name="register_form" method="post">
+    <form id="register_form" name="register_form" method="post" action="/home">
       <div class="six columns">
-        <input type="text"  name="fullname" class="inputbox" placeholder="Your Full Name">
+        <input type="text"  name="name" class="inputbox" placeholder="Your Full Name">
       </div>
       <div class="two columns">
         <input type="text" name="age" class="inputbox" placeholder="Age">
@@ -162,7 +163,7 @@
         <input type="text" id="reg-email" name="email" class="inputbox" placeholder="Your email">
       </div>
       <div class="six columns">
-        <input type="text"  name="phone" class="inputbox" placeholder="Mobile No.">
+        <input type="text"  name="mobile" class="inputbox" placeholder="Mobile No.">
       </div>
       <div class="six columns">
         <input type="password" id="reg-password" name="password" class="inputbox" placeholder="Desired password">
@@ -171,9 +172,10 @@
         <input type="password" id="confirm_password" name="confirm_password" class="inputbox" placeholder="Confirm password">
       </div>
       <div class="twelve columns">
-        <p><small>Check our <a href="#"><strong>terms and conditions</strong></a> before sign up. If you familiar with our terms, go ahead click CREATE MY ACCOUNT button.</small></p>
+        <p><small>Check our <a href="/termsofuse"><strong>terms and conditions</strong></a> before sign up. If you familiar with our terms, go ahead click CREATE MY ACCOUNT button.</small></p>
         <button type="submit" id="signup" name="submit" class="radius alert button"><i class="icon-heart"></i> &nbsp;CREATE MY ACCOUNT</button>
       </div>
+	<input type="hidden" name="register" value="truemodal">
     </form>
   </div><!--end row-->
   <a href="#" class="close-reveal-modal">×</a>

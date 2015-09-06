@@ -3,7 +3,7 @@
 /**
  * The User Model
  *
- * @author Faizan Ayubi
+ * @author Cloudstuffs Team
  */
 class User extends Shared\Model {
 
@@ -24,18 +24,18 @@ class User extends Shared\Model {
      * @validate required, alpha, min(3), max(32)
      * @label first name
      */
-    protected $_first;
+    protected $_name;
 
     /**
      * @column
      * @readwrite
      * @type text
-     * @length 100
+     * @length 10
      * 
      * @validate required, alpha, min(3), max(32)
-     * @label last name
+     * @label Gender
      */
-    protected $_last;
+    protected $_gender;
 
     /**
      * @column
@@ -48,6 +48,49 @@ class User extends Shared\Model {
      * @label email address
      */
     protected $_email;
+
+	/**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 100
+     * @index
+     * 
+     * @validate required, max(100)
+     * @label Mobile Number
+     */
+    protected $_mobile;
+/**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 3
+     * @index
+     * 
+     * @validate required, max(5)
+     * @label Age
+     */
+    protected $_age;
+/**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 100
+     * @index
+     * 
+     * @label Religion
+     */
+    protected $_religion;
+/**
+     * @column
+     * @readwrite
+     * @type text
+     * @length 100
+     * @index
+     * 
+     * @label Caste
+     */
+    protected $_caste;
 
     /**
      * @column

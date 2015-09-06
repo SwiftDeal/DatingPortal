@@ -43,7 +43,7 @@ namespace Shared {
         public function _secure() {
             $user = $this->getUser();
             if (!$user) {
-                header("Location: /login.html");
+                header("Location: /home");
                 exit();
             }
         }
@@ -77,7 +77,7 @@ namespace Shared {
                 $controller = Registry::get("controller");
                 $user = $session->get("user");
                 if ($user) {
-                    $controller->user = \User::first(array("id = ?" => $user));
+                    $controller->user = \User::first(array("id = ?" => $user->id));
                 }
             });
 

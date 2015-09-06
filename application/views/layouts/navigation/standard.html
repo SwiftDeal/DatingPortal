@@ -6,7 +6,7 @@
 <div class="top-links">
     <div class="row">
     <ul class=" block-grid">
-      <li class="nine columns"><a href="#"><i class="icon-envelope"></i> &nbsp;info@biharshadi.com</a></li>
+      <li class="nine columns"><a href="mailto:info@biharshadi.com"><i class="icon-envelope"></i> &nbsp;info@biharshadi.com</a></li>
       <li class="three columns hide-for-small">
         Find us on: 
         <a href="#http://www.facebook.com/" class="has-tip tip-bottom" data-width="210" title="Follow us on Twitter"><i class="icon-twitter"></i></a>
@@ -47,9 +47,9 @@
         <!-- end Main Navigation -->
       
     <!-- Logo -->
-    <div class="four columns pull-five">
+    <div class="three columns pull-five">
       <h1 id="logo">BiharShadi
-        <a href="index.html"><img src="{echo CDN}images/logo.png" width="294" height="108" alt="Bihar Shadi"></a>
+        <a href="/home"><img src="{echo CDN}images/logo.png" width="294" height="108" alt="Bihar Shadi"></a>
       </h1>
     </div>
     <!--end logo-->
@@ -59,11 +59,18 @@
       -  For faster loading we put all forms at the bottom of page -->
           
     <!--Login buttons-->  
-    <div class="three columns login-buttons">
+    <div class="four columns login-buttons">
         <div class="space-b-20 hide-for-small">&nbsp;</div> 
       <ul class="button-group radius right">
+
+	{if(isset($user))}
+        <li><a href="/users/myaccount"  class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i>$user->name</a></li>
+        <li><a href="/logout"" class="small button radius"><i class="icon-group hide-for-medium-down"></i>Logout</a></li>
+{/if}
+{else}
         <li><a href="#" data-reveal-id="login_panel" class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i> LOG IN</a></li>
         <li><a href="#" data-reveal-id="register_panel" class="small button radius"><i class="icon-group hide-for-medium-down"></i> Register</a></li>
+{/else}
       </ul>
     </div>
     <!--end login buttons-->

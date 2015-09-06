@@ -17,6 +17,7 @@ class Admin extends Users {
 	* changeLayout
 	*/
 	public function index() {
+		$this->changeLayout();
 		$this->seo(array("title" => "Admin Panel", "keywords" => "admin", "description" => "admin", "view" => $this->getLayoutView()));
 		$view = $this->getActionView();
 	}
