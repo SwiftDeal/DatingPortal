@@ -14,9 +14,9 @@ $routes = array(
         "action" => "index"
     ),
     array(
-        "pattern" => "blog_reader",
+        "pattern" => "about",
         "controller" => "home",
-        "action" => "blog_reader"
+        "action" => "about"
     ),
     array(
         "pattern" => "contact",

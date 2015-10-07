@@ -4,16 +4,19 @@
         <!--Form wrapper-->
         <div class="five columns form-wrapper">
           <div class="form-header">
-            <p class="lead text-resize">Register on <strong>Bihar Shadi</strong><br>For your perfect Life partner</p>
+            <p class="lead text-resize">Search on <strong>Bihar Shadi</strong><br>For your perfect Life partner</p>
           </div>
           <!--Search form-->
           <form action="/users/" method="post" class="custom form-search">
             <div class="row">
               <div class="five mobile-four columns">
-                <label class="right inline">Your Name</label>
+                <label class="right inline">Searching for :</label>
               </div>
               <div class="seven mobile-four columns">
-                <input type="text" name="name" placeholder="Full Name">
+                <select class="expand" name="gender">
+                  <option selected="selected" value="Female">Woman</option>
+                  <option value="Male">Man</option>
+                </select>
               </div>
             </div><!--end row-->
             <div class="row">
@@ -52,44 +55,30 @@
             </div><!--end row-->
             <div class="row">
               <div class="five mobile-one columns">
-                <label class="right inline">Age & Gener</label>
+                <label class="right inline">Age Between :</label>
               </div>
               <div class="three mobile-one columns">
-                  <input type="text"  name="age" placeholder="age">
-              </div>
-              <div class="four mobile-two columns">
-                <select class="expand" name="gender">
-                  <option selected="selected">Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Male">Female</option>
+                <select class="expand customDropdown" name="age_b">
+                  <option selected="selected">18</option>
+                  <option>19</option>
                 </select>
               </div>
-            </div>
-            <!--end row-->
-            <div class="row">
-              <div class="five mobile-one columns">
-                <label class="right inline">Phone Number</label>
+              <div class="one mobile-one columns text-center">
+                <label class="inline">to</label>
               </div>
-              <div class="seven mobile-one columns">
-                  <input type="text" name="phone" placeholder="+919876543210">
+              <div class="three mobile-one columns">
+                <select class="expand customDropdown" name="age_l">
+                  <option selected="selected">29</option>
+                  <option>30</option>
+                </select>
               </div>
-            </div>
-            <!--end row-->
-            <div class="row">
-              <div class="five mobile-one columns">
-                <label class="right inline">Email ID</label>
-              </div>
-              <div class="seven mobile-one columns">
-                <input type="text" name="email" placeholder="info@xyz.com">
-              </div>
-            </div>
-            <!--end row-->
+            </div><!--end row-->
             
             <div class="row">
-              <div class="seven offset-by-five columns"><button class="button radius" type="submit">Regsiter</button></div>
+              <div class="seven offset-by-five columns"><button class="button radius" type="submit"><i class="icon-search"></i> &nbsp;SEARCH</button></div>
             </div>
             <span class="notch"></span>
-	         	<input type="hidden" name="register" value="home">
+		<input type="hidden" name="psearch" value="search">
           </form>
           <!--end search form-->
   
@@ -113,8 +102,8 @@
     <div class="row map-bg">
     
       <div class="twelve columns">
-        <h1 class="section-title">We build your dream around<span class="pink-text">You.</span></h1>
-        <p class="lead">YExtroadinary weddings don’t just happen, they are planned.. More than <span class="pink-text">5000</span> in Bihar already shared the same experience and uses our system. <strong class="black-text">Joining us today just got easier!</strong></p>
+        <h1 class="section-title">It all starts with a <span class="pink-text">Date</span></h1>
+        <p class="lead"> More than <span class="pink-text">5000</span> in Bihar already shared the same experience and uses our system. <strong class="black-text">Joining us today just got easier!</strong></p>
       
         
         <!--Take action-->
@@ -183,8 +172,8 @@
   <div id="feature-text" class="text-center">
     <div class="row">
       <div class="twelve columns">
-        <h2><span class="no-bg">Because in your dreams, every detail matters.</span></h2>
-        <p class="lead">Here you have some reasons and some features. Its important to know each other (family) before getting married. We provide an enviorment for mutual understanding.</p>
+        <h2><span class="no-bg">Why Choose To <span class="pink-text">Become a Member?</span></span></h2>
+        <p class="lead">Here you have some reasons and some features. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div><!--end twelve-->
       
       <ul class="no-bullet">
@@ -193,8 +182,8 @@
             <a href="{echo CDN}images/small_thumb_01.png" class="imagelink" data-rel="prettyPhoto[gallery1]">
               <span class="overlay"></span>
               <span class="read"><i class="icon-heart"></i></span>
- <!--             <img src="{echo CDN}images/small_thumb_01.png" alt="">
-     -->       </a>
+              <img src="{echo CDN}images/small_thumb_01.png" alt="">
+            </a>
           </div>
           <h4>100% for FREE</h4>
           <p>You can register and create your profile for FREE! We are also promoting no dawry marriges.</p>
@@ -206,8 +195,8 @@
             <a href="{echo CDN}images/cast.jpeg" class="imagelink" data-rel="prettyPhoto[gallery1]">
               <span class="overlay"></span>
               <span class="read"><i class="icon-heart"></i></span>
-          <!--    < alt="">
-           --> </a>
+              <img src="{echo CDN}images/cast.jpeg" alt="">
+            </a>
           </div>
           <h4>Matching compatible partner</h4>
           <p>Invite friends to help you find your perfect match. We respect your personal views and we have match for the same caste and religion.</p>
@@ -219,11 +208,11 @@
             <a href="{echo CDN}images/small_thumb_03.png" class="imagelink" data-rel="prettyPhoto[gallery1]">
               <span class="overlay"></span>
               <span class="read"><i class="icon-heart"></i></span>
-             <!-- <img src="{echo CDN}images/small_thumb_03.png" alt="">
-           --> </a>
+              <img src="{echo CDN}images/small_thumb_03.png" alt="">
+            </a>
           </div>
           <h4>Mutual Understanding</h4>
-          <p>Its important to know each other (family) before getting married. We provide an enviorment for mutual understanding.</p>
+          <p>Its important to know each other before getting married. We provide an enviorment for mutual understanding.</p>
           <p><a href="#" class="small button radius secondary"><i class="icon-angle-right"></i> READ MORE</a></p>
         </li>
       </ul>
@@ -237,7 +226,7 @@
 
 
 <!-- TESTIMONIALS SECTION
-================================================
+================================================ -->
 <section>
   <div id="testimonials">
     <div class="row">
@@ -278,4 +267,4 @@
     </div>
   </div>
 </section>
-END TESTIMONIALS SECTION-->
+<!--END TESTIMONIALS SECTION-->

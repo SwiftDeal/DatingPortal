@@ -77,7 +77,7 @@ namespace Shared {
                 $controller = Registry::get("controller");
                 $user = $session->get("user");
                 if ($user) {
-                    $controller->user = \User::first(array("id = ?" => $user->id));
+                    $controller->user = $user;
                 }
             });
 
@@ -86,7 +86,7 @@ namespace Shared {
                 $session = Registry::get("session");
                 $controller = Registry::get("controller");
                 if ($controller->user) {
-                    $session->set("user", $controller->user->id);
+                    $session->set("user", $controller->user);
                 }
             });
 

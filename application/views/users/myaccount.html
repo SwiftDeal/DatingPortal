@@ -21,23 +21,20 @@
       <!--Content Info Tabs-->
       <ul class="tabs-content">
       	<!--First Info Tab Content-->
+        
         <li class="active" id="infoTab">
+        <form action="" method="post">
         	<ul class="accordion">
             <li>
               <h5 class="accordion-title">My self-summary<span class="accordion-icon"></span></h5>
-              <div class="accordion-content">
-                <p>Hello and welcome to the profile of your next true love. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+              <div class="accordion-content" style="width:100%">
+              <textarea name="self_summary" placeholder="Write about Your self"></textarea>
+               <br>
                 <h6>Favorite books, movies, shows, music and food</h6>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><br>
-                <h6>The six things I could never do without</h6>
-                <ul class="love-list">
-                  <li>Love</li>
-                  <li>My work - Graphic and Web design</li>
-                  <li>My best friends and true confidante John Arthur</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                  <li>Duis aute irure dolor</li>
-                  <li>Excepteur sint occaecat cupidatat</li>
-                </ul>
+              <textarea name="favourites" placeholder="Eg. I love home made foods"></textarea>
+              <br>
+                <h6>The five things with I can not compromise</h6>
+                  <textarea type="text" name="ncompromise" placeholder="I don't want any one interfaring me with my friends"></textarea>
               </div>
             </li>
              
@@ -45,49 +42,77 @@
               <h5 class="accordion-title">Life style<span class="accordion-icon"></span></h5>
               <div class="accordion-content">
                 <dl class="dl-horizontal">
-                  <dt>Interests</dt>
-                  <dd>RV, Art Enthusiast, Billiards, Horses/Equine, Music, Business, Writing, Snorkelling, Tenis, Gardening, Dogs, Cats, Antiques, Decorating.</dd>
-                  <dt>Favorite Vacations Spot</dt>
-                  <dd>Hawaii</dd>
-                  <dt>Ideal First Date</dt>
-                  <dd>Dinner on the beach</dd>
-                  <dt>Looking for</dt>
-                  <dd>Cyber Affair/Erotic Chat</dd>
-                  <dt>Staus</dt>
-                  <dd>Single</dd>
-                  <dt>Smoking</dt>
-                  <dd>Never</dd>
-                  <dt>Language</dt>
-                  <dd>English, Spanish, German, Portuguese</dd>
+                  <dt>Favorite Vacations Spot</dt><dd>Hawaii</dd>
+                  <dt>Members In Family</dt><dd><input type="number" name="fmembers"></dd>
+                  <dt>Family Type</dt><dd>
+                    <select name="family">
+                      <option>Single</option>
+                      <option>Joint</option>
+                    </select>
+                  </dd>
+                  <dt>Staus</dt><dd>
+                    <select name="status">
+                      <option>Single</option>
+                      <option>Spouse Died</option>
+                      <option>Divorced</option>
+                    </select>
+                  </dd>
+                  <dt>Smoking</dt><dd>
+                    <select name="smoking">
+                      <option>No</option>
+                      <option>Yes, Regularly</option>
+                      <option>Yes, Occasionaly</option>
+                    </select>
+                  </dd>
+                  <dt>Drinking</dt><dd>
+                    <select name="drinking">
+                      <option>No</option>
+                      <option>Yes, Regularly</option>
+                      <option>Yes, Occasionaly</option>
+                    </select>
+                  </dd>
+                  <dt>Language You Know</dt><dd><input type="text" name="languages"></dd>
                 </dl>
               </div>
             </li>
              
             <li>
-            	<h5 class="accordion-title">Physical<span class="accordion-icon"></span></h5>
+            	<h5 class="accordion-title">Educational & Physical<span class="accordion-icon"></span></h5>
               <div class="accordion-content">
                 <dl class="dl-horizontal">
-                  <dt>Height</dt>
-                  <dd>5'4</dd>
-                  <dt>Hair Color</dt>
-                  <dd>Dark Brown</dd>
-                  <dt>Eye Color</dt>
-                  <dd>Blue</dd>
-                  <dt>Body Type</dt>
-                  <dd>Pette</dd>
-                  <dt>Weight</dt>
-                  <dd>140</dd>
-                  <dt>Ethnicity</dt>
-                  <dd>European</dd>
-                  <dt>Age</dt>
-                  <dd>29</dd>
-                  <dt>Best Feature</dt>
-                  <dd>Silky smooth hair</dd>
+                  <dt>Height</dt><dd><input type="text" name="height"></dd>
+                  <dt>Weight</dt><dd><input type="text" name="weight"></dd>
+                  <dt>Rashi (*)</dt><dd><input type="text" name="rashi"></dd>
+                  <dt>Profession</dt><dd>
+                  <select name="profession">
+                    <option>Engineer</option>
+                    <option>Doctor</option>
+                    <option>Teacher</option>
+                    <option>Army</option>
+                    <option>Officer in Bank</option>
+                    <option>Officer in Railway</option>
+                    <option>Officer in Government</option>
+                    <option>Police</option>
+                    <option>Others</option>
+                  </select>
+                </dd>
+                  <dt>Highest Qualification</dt><dd><input type="text" name="qualification"></dd>
+                  <dt>Currently in Job</dt><dd>
+                  <select name="job_status">
+                    <option>No</option>
+                    <option>Yes</option>
+                  </select>
+                </dd>
                 </dl>
               </div>
             </li>
         	</ul>
+          <div style="margin-top:50px"><center>
+          <input type="hidden" name="update_info" value="update">
+          <button type="submit"  name="info_update" class="radius alert button"><i class="icon-heart"></i> &nbsp;Update Details</button></center></div>
+          </form>
         </li>
+        
         
         <!--Second Info Tab Content-->
         <li id="messagesTab">
@@ -236,7 +261,7 @@
 		================================================ -->
     <aside class="four columns offset-by-one hide-for-small">
       
-      <h1 class="sweetfont left">Hanna Marcovick</h1>
+      <h1 class="sweetfont left">$user->name</h1>
       
     	<!--Widgets Container-->
       <div class="widgets-container ">

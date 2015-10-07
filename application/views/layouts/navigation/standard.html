@@ -63,9 +63,9 @@
         <div class="space-b-20 hide-for-small">&nbsp;</div> 
       <ul class="button-group radius right">
 
-	{if(isset($user))}
-        <li><a href="/users/myaccount"  class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i>$user->name</a></li>
-        <li><a href="/logout"" class="small button radius"><i class="icon-group hide-for-medium-down"></i>Logout</a></li>
+	{if($user)}
+        <li><a href="/users/myaccount"  class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i>{echo $user->name}</a></li>
+        <li><a href="/logout" class="small button radius"><i class="icon-group hide-for-medium-down"></i>Logout</a></li>
 {/if}
 {else}
         <li><a href="#" data-reveal-id="login_panel" class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i> LOG IN</a></li>
